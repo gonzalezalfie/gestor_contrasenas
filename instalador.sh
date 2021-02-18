@@ -6,15 +6,11 @@ cd $HOME/gestor_contrasenas
 
 wget https://raw.githubusercontent.com/gonzalezalfie/gestor_contrasenas/main/gestor_contrasenas.py
 
-sudo apt-get install python3-pip
+sudo chmod +x gestor_contrasenas.py
 
-export LC_ALL=C
+#sudo apt-get install python3-pip
 
-#pip3 install numpy
-
-#pip3 install pandas
-
-#pip3 install pycrypto
+#export LC_ALL=C
 
 sudo apt-get install python3-numpy
 
@@ -22,8 +18,8 @@ sudo apt-get install python3-pandas
 
 sudo apt-get install python3-crypto
 
-sudo echo "python3 $HOME/gestor_contrasenas/gestor_contrasenas.py" > /usr/bin/gestor_contrasenas
+#sudo echo "python3 $HOME/gestor_contrasenas/gestor_contrasenas.py" > /usr/#bin/gestor_contrasenas
 
-sudo chmod +x gestor_contrasenas.py
+echo "gestor_contrasenas='python3 $HOME/gestor_contrasenas/gestor_contrasenas.py'" >> ~/.bashrc
 
 
