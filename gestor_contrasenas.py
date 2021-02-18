@@ -1,4 +1,7 @@
-directorio = '$HOME/gestor_contrasenas'
+from os.path import expanduser
+home = expanduser("~")
+
+directorio = home + '/gestor_contrasenas'
 
 import os
 os.chdir(directorio)
