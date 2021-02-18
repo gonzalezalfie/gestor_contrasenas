@@ -57,9 +57,9 @@ def validar_contrasena(contrasena):
        tiene_minuscula and \
        tiene_numero and \
        tiene_caracter_especial):
-       print("La contraseña es válida.")
+       print("La contraseña es válida.".encode("utf-8"))
     else:
-        print("La contraseña no es válida.")
+        print("La contraseña no es válida.".encode("utf-8"))
 
 import base64
 import hashlib
@@ -124,8 +124,8 @@ def salir():
 
 def crear_contrasena_maestra():
 
-    raw_1 = input("Escribir contraseña: ")
-    raw_2 = input("Escribir de nuevo la contraseña: ")
+    raw_1 = input("Escribir contraseña: ".encode("utf-8"))
+    raw_2 = input("Escribir de nuevo la contraseña: ".encode("utf-8"))
 
     if raw_1 == raw_2:
 
@@ -144,7 +144,7 @@ def crear_contrasena_maestra():
         contrasenas.to_csv("contrasenas.csv", index = False)
         
     else:
-        print("Las contraseñas no coinciden")
+        print("Las contraseñas no coinciden".encode("utf-8"))
 
 #verificar_contrasena_maestra()
 
@@ -236,8 +236,8 @@ def cambiar_contrasena_maestra():
     
     if hashlib.sha256(raw.encode()).digest() == contrasena:
 
-        raw_1 = input("Escribir contraseña: ")
-        raw_2 = input("Escribir de nuevo la contraseña: ")
+        raw_1 = input("Escribir contraseña: ".encode("utf-8"))
+        raw_2 = input("Escribir de nuevo la contraseña: ".encode("utf-8"))
     
         if raw_1 == raw_2:
     
@@ -250,10 +250,10 @@ def cambiar_contrasena_maestra():
             global cipher
             cipher = AESCipher(contrasena_maestra)
         else:
-            print("Las contraseñas no coinciden")
+            print("Las contraseñas no coinciden".encode("utf-8"))
 
     else:
-        print("La contraseña es incorrecta.")
+        print("La contraseña es incorrecta.".encode("utf-8"))
 
 #ayuda()
 
@@ -287,7 +287,7 @@ def menu():
 def inicio():
 
     while(not os.path.exists('contrasena_maestra')):
-        print("Para usar el gestor de contraseñas, se tiene que crear una contraseña maestra.")
+        print("Para usar el gestor de contraseñas, se tiene que crear una contraseña maestra.".encode("utf-8"))
         crear_contrasena_maestra()
     
     autenticado = 0
@@ -295,7 +295,7 @@ def inicio():
     while autenticado == 0:
         autenticado = verificar_contrasena_maestra()
         if autenticado == 0:
-            print("La contraseña es incorrecta.")
+            print("La contraseña es incorrecta.".encode("utf-8"))
     global cipher
     cipher = AESCipher(contrasena_maestra)
     menu()
