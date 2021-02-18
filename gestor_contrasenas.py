@@ -274,7 +274,8 @@ def menu():
         try:
             comando_raw = re.search(r"(^.*)(\(.*)", raw).group(1)
         except:
-            print("Función inválida. Para más información escribir ayuda().")
+            comando_raw = ""
+        
         if comando_raw in ["salir", "ayuda", "agregar_cuenta", "mostrar_cuenta", 
                            "eliminar_cuenta", "cambiar_contrasena", 
                            "cambiar_contrasena_maestra"]:
