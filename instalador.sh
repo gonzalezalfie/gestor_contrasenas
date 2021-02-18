@@ -6,6 +6,10 @@ cd $HOME/gestor_contrasenas
 
 wget https://raw.githubusercontent.com/gonzalezalfie/gestor_contrasenas/main/gestor_contrasenas.py
 
+sudo apt update
+
+sudo apt install python3-pip
+
 pip install numpy
 
 pip install pandas
