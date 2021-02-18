@@ -20,6 +20,6 @@ sudo apt-get install python3-crypto
 
 #sudo echo "python3 $HOME/gestor_contrasenas/gestor_contrasenas.py" > /usr/#bin/gestor_contrasenas
 
-echo "gestor_contrasenas='python3 $HOME/gestor_contrasenas/gestor_contrasenas.py'" >> ~/.bashrc
+echo "alias gestor_contrasenas='python3 $HOME/gestor_contrasenas/gestor_contrasenas.py'" >> ~/.bashrc
 
 
