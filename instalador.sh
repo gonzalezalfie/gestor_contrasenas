@@ -18,8 +18,10 @@ sudo apt-get install python3-pandas
 
 sudo apt-get install python3-crypto
 
-#sudo echo "python3 $HOME/gestor_contrasenas/gestor_contrasenas.py" > /usr/#bin/gestor_contrasenas
+sudo echo "python3 $HOME/gestor_contrasenas/gestor_contrasenas.py" > /usr/bin/gestor_contrasenas
 
-echo "alias gestor_contrasenas='python3 $HOME/gestor_contrasenas/gestor_contrasenas.py'" >> ~/.bashrc
+sudo chmod +x /usr/bin/gestor_contrasenas
+
+#echo "alias gestor_contrasenas='python3 $HOME/gestor_contrasenas/#gestor_contrasenas.py'" >> ~/.bashrc
 
 
